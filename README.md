@@ -1,6 +1,5 @@
+<img src="http://s7.picofile.com/file/8377789150/photo_2019_11_10_14_20_29.jpg" alt="telegram bot" >
 <img src="http://s7.picofile.com/file/8377788926/photo_2019_11_10_14_20_07.jpg" alt="telegram bot" >
-
-
 # MR_Liosion
 یه اکسپلویت باحال حوصلم سر رفته بود نوشتم براتون
 البته نمیشه بش اکسپلویت گفت
