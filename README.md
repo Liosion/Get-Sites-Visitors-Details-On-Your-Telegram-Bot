@@ -28,7 +28,7 @@ For Example==></br>
  Your Victim Ip==> 178.208.175.228</br>
  ---------+--------</br>
  Your Victim MACAddress==>  been disabled fo</br>
- ---------+--------
+ ---------+--------</br>
  Your Victim PC Name==> Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36</br>
  ---------+--------</br>
  Your Victim Hostname==> 178.208.175.228</br>
