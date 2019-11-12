@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 //Bot Token + UserID
 
 $bot_token = "854979584:AAGigxt4fyVv0Cp2XZPMk3Ukr-ycTZB-SgU";
